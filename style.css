@@ -1,0 +1,465 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: bold;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #dbefbd;
+  position: relative;
+}
+
+.heading {
+  height: 15vh;
+  width: auto;
+  font-size: 2.5rem;
+  margin-top: 2.5rem;
+  padding: 0.625rem 0.3125rem;
+  text-align: center;
+  position: relative;
+  top: 1.25rem;
+  left: -80px;
+}
+
+#Map-div {
+  height: 90vh;
+  width: 65vw;
+  margin: 1.25rem auto;
+}
+
+#Map-div path {
+  fill: #ede8e5;
+  stroke: #f4c798;
+  stroke-width: 1px;
+}
+
+#Map-div path:hover {
+  fill: rgb(155, 238, 185);
+  stroke-width: 4px;
+  transition: fill 0.7s;
+}
+text {
+  font-size: 11px;
+}
+text:hover {
+  cursor: pointer;
+}
+#details-box {
+  font-weight: 700;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ede8e5;
+  height: 80px;
+  width: 160px;
+  opacity: 100%;
+  position: absolute;
+  top: 150px;
+  right: 150px;
+}
+@media screen and (max-width: 800px) {
+  .heading {
+    width: 100%;
+    font-size: 25px;
+    margin: auto;
+    position: relative;
+    left: 70px;
+  }
+  #Map-div {
+    height: 70vh;
+    width: 100vw;
+    position: relative;
+    left: 120px;
+    top: 50px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .heading {
+    position: inherit;
+    left: 30px;
+  }
+}
+/* Abia */
+.AB-RecO {
+  fill: #db620c;
+}
+.AB-RecG {
+  fill: rgb(21, 224, 21);
+}
+.AB-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Adamawa */
+.AD-RecO {
+  fill: #db620c;
+}
+.AD-RecG {
+  fill: rgb(21, 224, 21);
+}
+.AD-RecB {
+  fill: rgb(15, 6, 184);
+}
+
+/* Akwa Ibom */
+.AK-RecO {
+  fill: #db620c;
+}
+.AK-RecG {
+  fill: rgb(21, 224, 21);
+}
+.AK-RecB {
+  fill: rgb(15, 6, 184);
+}
+
+/* Anambra */
+.AN-RecO {
+  fill: #db620c;
+}
+.AN-RecB {
+  fill: rgb(15, 6, 184);
+}
+.AN-RecG {
+  fill: rgb(21, 224, 21);
+}
+/* Bauchi */
+.BA-RecG {
+  fill: rgb(21, 224, 21);
+}
+.BA-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Bayelsa */
+.BY-RecB {
+  fill: rgb(15, 6, 184);
+}
+.BY-RecG {
+  fill: rgb(21, 224, 21);
+}
+/* Benue */
+.BE-RecO {
+  fill: #db620c;
+}
+.BE-RecG {
+  fill: rgb(21, 224, 21);
+}
+.BE-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Borno  */
+.BO-RecG {
+  fill: rgb(21, 224, 21);
+}
+.BO-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Cross River */
+.CR-RecO {
+  fill: #db620c;
+}
+.CR-RecG {
+  fill: rgb(21, 224, 21);
+}
+.CR-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Delta */
+.DE-RecO {
+  fill: #db620c;
+}
+.DE-RecG {
+  fill: rgb(21, 224, 21);
+}
+.DE-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Ebonyi */
+.EB-RecO {
+  fill: #db620c;
+}
+.EB-RecG {
+  fill: rgb(21, 224, 21);
+}
+.EB-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Edo */
+.ED-RecO {
+  fill: #db620c;
+}
+.ED-RecG {
+  fill: rgb(21, 224, 21);
+}
+.ED-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Ekiti */
+.EK-RecO {
+  fill: #db620c;
+}
+.EK-RecG {
+  fill: rgb(21, 224, 21);
+}
+.EK-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Enugu */
+.EN-RecO {
+  fill: #db620c;
+}
+.EN-RecG {
+  fill: rgb(21, 224, 21);
+}
+.EN-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Abuja */
+.FCT-RecO {
+  fill: #db620c;
+}
+.FCT-RecG {
+  fill: rgb(21, 224, 21);
+}
+.FCT-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Gombe */
+.GO-RecG {
+  fill: rgb(21, 224, 21);
+}
+.GO-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Imo */
+.IM-RecO {
+  fill: #db620c;
+}
+.IM-RecG {
+  fill: rgb(21, 224, 21);
+}
+.IM-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Jigawa */
+.JI-RecO {
+  fill: #db620c;
+}
+.JI-RecG {
+  fill: rgb(21, 224, 21);
+}
+.JI-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Kaduna */
+.KD-RecO {
+  fill: #db620c;
+}
+.KD-RecG {
+  fill: rgb(21, 224, 21);
+}
+.KD-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Kebbi */
+.KE-RecO {
+  fill: #db620c;
+}
+.KE-RecG {
+  fill: rgb(21, 224, 21);
+}
+.KE-RecB {
+  fill: rgb(15, 6, 184);
+}
+
+/* Kano */
+.KN-RecO {
+  fill: #db620c;
+}
+.KN-RecG {
+  fill: rgb(21, 224, 21);
+}
+.KN-RecB {
+  fill: rgb(15, 6, 184);
+}
+
+/* Kogi */
+.KO-RecO {
+  fill: #db620c;
+}
+.KO-RecG {
+  fill: rgb(21, 224, 21);
+}
+.KO-RecB {
+  fill: rgb(15, 6, 184);
+}
+
+/* Kastina */
+.KT-RecO {
+  fill: #db620c;
+}
+.KT-RecG {
+  fill: rgb(21, 224, 21);
+}
+.KT-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Kwara */
+.KW-RecO {
+  fill: #db620c;
+}
+.KW-RecG {
+  fill: rgb(21, 224, 21);
+}
+.KW-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Lagos */
+.LA-RecO {
+  fill: #db620c;
+}
+.LA-RecG {
+  fill: rgb(21, 224, 21);
+}
+.LA-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Nasarawa */
+.NA-RecO {
+  fill: #db620c;
+}
+.NA-RecG {
+  fill: rgb(21, 224, 21);
+}
+.NA-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Niger */
+.NI-RecO {
+  fill: #db620c;
+}
+.NI-RecG {
+  fill: rgb(21, 224, 21);
+}
+.NI-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Ogun */
+.OG-RecO {
+  fill: #db620c;
+}
+.OG-RecG {
+  fill: rgb(21, 224, 21);
+}
+.OG-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Ondo */
+.ON-RecO {
+  fill: #db620c;
+}
+.ON-RecG {
+  fill: rgb(21, 224, 21);
+}
+.ON-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Osun */
+.OS-RecO {
+  fill: #db620c;
+}
+.OS-RecG {
+  fill: rgb(21, 224, 21);
+}
+.OS-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Oyo */
+.OY-RecO {
+  fill: #db620c;
+}
+.OY-RecG {
+  fill: rgb(21, 224, 21);
+}
+.OY-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Plateau */
+.PL-RecO {
+  fill: #db620c;
+}
+.PL-RecG {
+  fill: rgb(21, 224, 21);
+}
+.PL-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Rivers */
+.RI-RecO {
+  fill: #db620c;
+}
+.RI-RecG {
+  fill: rgb(21, 224, 21);
+}
+.RI-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Sokoto */
+.SO-RecO {
+  fill: #db620c;
+}
+.SO-RecG {
+  fill: rgb(21, 224, 21);
+}
+.SO-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Taraba */
+.TA-RecO {
+  fill: #db620c;
+}
+.TA-RecG {
+  fill: rgb(21, 224, 21);
+}
+.TA-RecB {
+  fill: rgb(15, 6, 184);
+}
+/* Yobe */
+.YO-RecO {
+  fill: #db620c;
+}
+.YO-RecG {
+  fill: rgb(21, 224, 21);
+}
+/* Zamfara */
+.ZA-RecO {
+  fill: #db620c;
+}
+.ZA-RecG {
+  fill: rgb(21, 224, 21);
+}
+.Private-rect {
+  fill: #db620c;
+}
+.Federal-rect {
+  fill: rgb(21, 224, 21);
+}
+.State-rect {
+  fill: rgb(15, 6, 184);
+}
+.Private-text,
+.Federal-text,
+.State-text {
+  font-size: 20px;
+}
+.Private-text,
+.Federal-text,
+.State-text:hover {
+  cursor: default;
+}
